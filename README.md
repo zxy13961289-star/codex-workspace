@@ -8,12 +8,25 @@ This repository uses HTTPS with the GitHub CLI credential helper for authenticat
 
 ## wordstats
 
-A small, dependency-free Python package that counts lines, words, and characters.
+A small, dependency-free Python package that counts lines, words, and characters,
+and reports the most common words.
 
 Run it against a file:
 
 ```sh
 python -m wordstats README.md
+```
+
+Run it against several files to see per-file stats and a total:
+
+```sh
+python -m wordstats README.md LICENSE
+```
+
+Show the five most common words:
+
+```sh
+python -m wordstats --top 5 README.md
 ```
 
 Or pipe text through standard input:

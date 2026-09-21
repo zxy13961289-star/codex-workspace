@@ -1,5 +1,10 @@
 """Text statistics helpers."""
 
+import re
+from collections import Counter
+
+_WORD_RE = re.compile(r"\b\w+\b")
+
 
 def count_stats(text):
     """Return line, word, and character counts for ``text``."""
@@ -15,3 +20,12 @@ def count_stats(text):
         "words": len(text.split()),
         "characters": len(text),
     }
+
+
+def top_words(text, n=5):
+    """Return the ``n`` most common words as ``(word, count)`` tuples.
+
+    Matching is case-insensitive and ignores punctuation.
+    """
+    words = _WORD_RE.findall(text.lower())
+    return Counter(words).most_common(n)
