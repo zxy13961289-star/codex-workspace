@@ -4,6 +4,8 @@ Starter repository created with Codex and connected to GitHub.
 
 This repository uses HTTPS with the GitHub CLI credential helper for authentication.
 
+[![CI](https://github.com/zxy13961289-star/codex-workspace/actions/workflows/ci.yml/badge.svg)](https://github.com/zxy13961289-star/codex-workspace/actions/workflows/ci.yml)
+
 ## wordstats
 
 A small, dependency-free Python package that counts lines, words, and characters.

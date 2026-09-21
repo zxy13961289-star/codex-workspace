@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wordstats"
+version = "0.1.0"
+description = "A dependency-free Python package that counts lines, words, and characters."
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+[tool.setuptools]
+packages = ["wordstats"]
